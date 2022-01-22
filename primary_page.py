@@ -9,7 +9,7 @@ def load_data():
     return data
 
 
-UFC_fighter_photo_loc = r'D:\Datasets\UFC_Data\UFC_Fighters_photos'
+UFC_fighter_photo_loc = ".\\UFC_Fighters_photos"
 
 image = Image
 
