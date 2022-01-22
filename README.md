@@ -13,6 +13,8 @@ This project is made in order to predict the winners of UFC Fights using physica
  - Python Engineer [Build A Machine Learning Web App From Scratch](https://www.youtube.com/watch?v=xl0N7tHiwlw)
  - Avinash Navlani [Understanding Logistic Regression in Python](https://www.datacamp.com/community/tutorials/understanding-logistic-regression-python)
  - Karmanya Aggarwal [UFC Predictor and Notes](https://www.kaggle.com/calmdownkarm/ufc-predictor-and-notes)
+ - Atul Patel [Feature Selection using ANOVA Test for Classification and Regression](https://www.youtube.com/watch?v=wElwOM88xJQ)
+ - Jason Brownlee [How to Choose a Feature Selection Method For Machine Learning](https://machinelearningmastery.com/feature-selection-with-real-and-categorical-data/)
 
 
 ## 🖥️ Installation
