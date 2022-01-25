@@ -4,6 +4,7 @@ import numpy as np
 from PIL import Image
 import sklearn
 
+
 def load_data():
     with open('saved_steps.pkl', 'rb') as file:
         data = pickle.load(file)
