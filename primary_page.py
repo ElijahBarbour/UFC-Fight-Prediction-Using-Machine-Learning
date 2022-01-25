@@ -2,6 +2,7 @@ import streamlit as st
 import pickle
 import numpy as np
 from PIL import Image
+import sklearn
 
 def load_data():
     with open('saved_steps.pkl', 'rb') as file:
