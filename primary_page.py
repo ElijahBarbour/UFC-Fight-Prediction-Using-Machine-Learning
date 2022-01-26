@@ -10,7 +10,7 @@ def load_data():
     return data
 
 
-UFC_fighter_photo_loc = ".\\UFC_Fighters_photos\\UFCFightersPhotos"
+UFC_fighter_photo_loc = r".\UFC_Fighters_photos\UFCFightersPhotos"
 
 image = Image
 
