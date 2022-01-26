@@ -2,6 +2,7 @@ import streamlit as st
 import pickle
 import numpy as np
 from PIL import Image
+import os
 
 
 def load_data():
@@ -10,7 +11,7 @@ def load_data():
     return data
 
 
-UFC_fighter_photo_loc = r".\UFC_Fighters_photos\UFCFightersPhotos"
+UFC_fighter_photo_loc = ".\\UFC_Fighters_photos\\UFCFightersPhotos"
 
 image = Image
 
@@ -25,6 +26,7 @@ model_acc = data["model_acc"]
 def show_page():
     m_acc = model_acc * 100
     st.title("UFC Fight Prediciton Using Machine Learning")
+    st.write(os.getcwd())
     st.write("""#### Model Accuracy: {:.2f}%""".format(m_acc))
     st.title("")
     st.write("""### Choose Your Weight Class""")
