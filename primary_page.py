@@ -11,7 +11,7 @@ def load_data():
     return data
 
 
-UFC_fighter_photo_loc = ".\\UFC_Fighters_photos\\UFCFightersPhotos"
+UFC_fighter_photo_loc = os.getcwd()+"./UFC_Fighters_photos/UFCFightersPhotos"
 
 image = Image
 
@@ -44,14 +44,14 @@ def show_page():
     with col1:
         Red_Fighter = st.selectbox(label = "Select Red Fighter", options = fighters_)
         rFighter = Red_Fighter.replace(" ", "-")
-        rFighter_loc = UFC_fighter_photo_loc+'\\'+rFighter+".jpg"
+        rFighter_loc = UFC_fighter_photo_loc+'/'+rFighter+".jpg"
         try: rImage = Image.open(rFighter_loc)
         except:
             if(weight_class == 'womens_strawweight' or weight_class == 'womens_flyweight' or weight_class == 'womens_bantamweight' or weight_class == 'womens_featherweight'):
-                rFighter_loc = UFC_fighter_photo_loc+'\\'+"Default-G.jpg"
+                rFighter_loc = UFC_fighter_photo_loc+'/'+"Default-G.jpg"
                 rImage = Image.open(rFighter_loc)
             else:
-                rFighter_loc = UFC_fighter_photo_loc+'\\'+"Default-B.jpg"
+                rFighter_loc = UFC_fighter_photo_loc+'/'+"Default-B.jpg"
                 rImage = Image.open(rFighter_loc)
 
         st.image(rImage)
@@ -59,15 +59,15 @@ def show_page():
     with col3:
         Blue_Fighter = st.selectbox(label = "Select Blue Fighter", options = fighters_)
         bFighter = Blue_Fighter.replace(" ", "-")
-        bFighter_loc = UFC_fighter_photo_loc+'\\'+bFighter+".jpg"
+        bFighter_loc = UFC_fighter_photo_loc+'/'+bFighter+".jpg"
         try:
             bImage = Image.open(bFighter_loc)
         except:
             if(weight_class == 'womens_strawweight' or weight_class == 'womens_flyweight' or weight_class == 'womens_bantamweight' or weight_class == 'womens_featherweight'):
-                bFighter_loc = UFC_fighter_photo_loc+'\\'+"Default-G.jpg"
+                bFighter_loc = UFC_fighter_photo_loc+'/'+"Default-G.jpg"
                 bImage = Image.open(bFighter_loc)
             else:
-                bFighter_loc = UFC_fighter_photo_loc+'\\'+"Default-B.jpg"
+                bFighter_loc = UFC_fighter_photo_loc+'/'+"Default-B.jpg"
                 bImage = Image.open(bFighter_loc)
 
         st.image(bImage)
