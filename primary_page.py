@@ -11,7 +11,7 @@ def load_data():
     return data
 
 
-UFC_fighter_photo_loc = os.getcwd()+"./UFC_Fighters_photos/UFCFightersPhotos"
+UFC_fighter_photo_loc = os.getcwd()+"/UFC_Fighters_photos/UFCFightersPhotos"
 
 image = Image
 
