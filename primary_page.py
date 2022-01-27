@@ -45,7 +45,7 @@ def show_page():
         Red_Fighter = st.selectbox(label = "Select Red Fighter", options = fighters_)
         rFighter = Red_Fighter.replace(" ", "-")
         rFighter_loc = UFC_fighter_photo_loc+'/'+rFighter+".jpg"
-        st.write(rFighter_loc)
+        #st.write(rFighter_loc)
         try: rImage = Image.open(rFighter_loc)
         except:
             if(weight_class == 'womens_strawweight' or weight_class == 'womens_flyweight' or weight_class == 'womens_bantamweight' or weight_class == 'womens_featherweight'):
