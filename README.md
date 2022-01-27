@@ -47,7 +47,7 @@ This project is made in order to predict the winners of UFC Fights using physica
 ## Deployment
 
 This Machine Learning Project is ran using Streamlit. The necessary python scripts for streamlit are included in repository. You can find a deployed version of this project
- ### Here
+ ### [Here](https://share.streamlit.io/elijahbarbour/ufc-fight-prediction-using-machine-learning/app.py)
 
 
 
