@@ -10,7 +10,26 @@ def load_data():
         data = pickle.load(file)
     return data
 
-
+def prediction_function(X, bImage, rImage, Blue_Fighter, Red_Fighter):
+    Winner = model.predict(X)
+    proba = model.predict_proba(X)
+    if proba[0][0] > proba[0][1]: proba = proba[0][0]*100
+    else: proba = proba[0][1]*100
+    st.title("")
+    st.title("")
+    if Winner[0] == 0:
+        st.write("""## Winner:""")
+        st.image(bImage)
+        st.title("")
+        st.write("""### {}""".format(Blue_Fighter))
+        st.write("""#### Prediction Probability {} wins: {:.2f}%""".format(Blue_Fighter, proba))
+    else:
+        st.write("""## Winner:""")
+        st.image(rImage)
+        st.title("")
+        st.write("""### {}""".format(Red_Fighter))
+        st.write("""#### Prediction Probability {} wins: {:.2f}%""".format(Red_Fighter, proba))
+                
 UFC_fighter_photo_loc = os.getcwd()+"/UFC_Fighters_Photos/UFCFightersPhotos"
 
 image = Image
@@ -109,22 +128,10 @@ def show_page():
 
                 X = np.array([[win_streak_diff, loss_diff, round_count_diff, reach_diff, age_diff, avg_TD_landed_diff, sig_str_diff]])
 
-                Winner = model.predict(X)
-                proba = model.predict_proba(X)
-                if proba[0][0] > proba[0][1]: proba = proba[0][0]*100
-                else: proba = proba[0][1]*100
-                st.title("")
-                st.title("")
-                if Winner[0] == 0:
-                    st.write("""## Winner:""")
-                    st.image(bImage)
-                    st.title("")
-                    st.write("""### {}""".format(Blue_Fighter))
-                    st.write("""#### Prediction Probability {} wins: {:.2f}%""".format(Blue_Fighter, proba))
-                else:
-                    st.write("""## Winner:""")
-                    st.image(rImage)
-                    st.title("")
-                    st.write("""### {}""".format(Red_Fighter))
-                    st.write("""#### Prediction Probability {} wins: {:.2f}%""".format(Red_Fighter, proba))
+                try:
+                    prediction_function(X, bImage, rImage, Blue_Fighter, Red_Fighter)
+                except:
+                    st.write("""## I am sorry!""")
+                    st.write("""### We have encountered an error when processing these fighters.""")
+                    st.write("""### Please Try a Different Red and/or Blue Fighter""")
                 
