@@ -26,7 +26,7 @@ model_acc = data["model_acc"]
 def show_page():
     m_acc = model_acc * 100
     st.title("UFC Fight Prediciton Using Machine Learning")
-    st.write(os.getcwd())
+    #st.write(os.getcwd())
     st.write("""#### Model Accuracy: {:.2f}%""".format(m_acc))
     st.title("")
     st.write("""### Choose Your Weight Class""")
