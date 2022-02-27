@@ -1,5 +1,5 @@
 
-# UFC Fight Prediciton Using Machine Learning
+# [UFC Fight Prediciton Using Machine Learning](https://share.streamlit.io/elijahbarbour/ufc-fight-prediction-using-machine-learning/app.py)
 
 This project is made in order to predict the winners of UFC Fights using physical statistics like height, age, etc. This project tests multiple Classification Techniques and uses the highest accuaracy Model to make predictions. The Model is then demonstrated within web app using Streamlit.
 
